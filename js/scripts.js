@@ -51,7 +51,6 @@ Pizza.prototype.findPrice = function(){
 
 
 //User Logic
-
 function handleDescription1(){
   const header1 =  document.querySelector("#size-description");
   if (header1.classList.contains ("hidden")) {
