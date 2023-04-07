@@ -51,9 +51,55 @@ Pizza.prototype.findPrice = function(){
 
 
 //User Logic
+
+function showDescription1(event){
+  const header1 =  document.querySelector("#size-description")
+  if (header1.classList.contains ("hidden")) {
+    header1.removeAttribute("class");
+  } else {
+    header1.setAttribute("class", "hidden");
+  }
+}
+
+function showDescription2(event){
+  const header2 =  document.querySelector("#dough-description")
+  if (header2.classList.contains ("hidden")) {
+    header2.removeAttribute("class");
+  } else {
+    header2.setAttribute("class", "hidden");
+  }
+}
+
+function showDescription3(event){
+  const header3 =  document.querySelector("#cheese-description")
+  if (header3.classList.contains ("hidden")) {
+    header3.removeAttribute("class");
+  } else {
+    header3.setAttribute("class", "hidden");
+  }
+}
+
+function showDescription4(event){
+  const header4 =  document.querySelector("#meat-description")
+  if (header4.classList.contains ("hidden")) {
+    header4.removeAttribute("class");
+  } else {
+    header4.setAttribute("class", "hidden");
+  }
+}
+
+function showDescription5(event){
+  const header5 =  document.querySelector("#nonmeat-description")
+  if (header5.classList.contains ("hidden")) {
+    header5.removeAttribute("class");
+  } else {
+    header5.setAttribute("class", "hidden");
+  }
+}
+
 function reveal(){
   document.querySelector("#confirmation-ul").removeAttribute("class");
-};
+}
 
 function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
   document.querySelector("li#sizeConfirm").innerText = size;
@@ -68,7 +114,7 @@ function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
   } else {
     document.querySelector("li#nonMeatConfirm").innerText = "No Toppings";
   }
-};
+}
 
 function handleFormSubmission(event) {
   event.preventDefault();
@@ -87,8 +133,14 @@ function handleFormSubmission(event) {
   let pizzaOrder = new Pizza(size, gluten, cheese, meat, nonMeat);
   let pizzaPrice = pizzaOrder.findPrice();
   document.getElementById("pizza-price").innerText = "$"+pizzaPrice+".00";
-};
+}
 
 window.addEventListener("load", function (){
   document.querySelector("form#pizza-options").addEventListener("submit", handleFormSubmission);
+  document.querySelector(".menu-header1").addEventListener("click", showDescription1);
+  document.querySelector(".menu-header2").addEventListener("click", showDescription2);
+  document.querySelector(".menu-header3").addEventListener("click", showDescription3);
+  document.querySelector(".menu-header4").addEventListener("click", showDescription4);
+  document.querySelector(".menu-header5").addEventListener("click", showDescription5);
+
 });
