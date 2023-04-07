@@ -9,32 +9,31 @@ function Pizza(size, gluten, cheese, meat, nonMeat) {
 
 Pizza.prototype.findPrice = function(){
   let price = 0
-  if (this.sizeSelection === "small"){
+  if (this.sizeSelection === "Small"){
     price = price + 10;
-  } else if (this.sizeSelection === "medium") {
+  } else if (this.sizeSelection === "Medium") {
     price = price + 12;
-  } else if (this.sizeSelection === "large"){
+  } else if (this.sizeSelection === "Large"){
     price = price + 14;
   }
   
-  if (this.glutenSelection === "gf"){
+  if (this.glutenSelection === "Gluten Free Dough"){
     price = price + 2;
   }
 
-  if (this.extraCheeseSelection === "extra-cheese"){
+  if (this.extraCheeseSelection === "Extra Cheese"){
     price = price + 2;
   }
 
-  if (this.meatsSelection === "pepperoni"){
+  if (this.meatsSelection === "Pepperoni"){
     price = price + 1;
-  } else if (this.meatsSelection === "sausage") {
+  } else if (this.meatsSelection === "Sausage") {
     price = price + 2;
-  } else if (this.meatsSelection === "prosciutto"){
+  } else if (this.meatsSelection === "Prosciutto"){
     price = price + 4;
-  } else {
+  } else if (this.meatsSelection === "No Meat"){
     price = price + 0;
   }
-
   return price;
 };
 
@@ -55,7 +54,7 @@ function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
   if (nonMeatArray.length > 0) {
     document.querySelector("li#nonMeatConfirm").innerText = nonMeatArray.join(", ");
   } else {
-    document.querySelector("li#nonMeatConfirm").innerText = "no toppings";
+    document.querySelector("li#nonMeatConfirm").innerText = "No Toppings";
   }
 };
 
