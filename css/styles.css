@@ -15,6 +15,10 @@ h4 {
   padding-bottom: 2px;
 }
 
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
+
+ul {
+  font-style: italic;
+}

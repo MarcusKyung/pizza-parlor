@@ -33,6 +33,13 @@ _{This is a detailed description of your application. Give as much detail as nee
 ```Code: const myPizza = new Pizza(medium, gf, extraCheese, pepperoni, peppers);```
 ```Expected Output: Pizza { sizeSelection: medium, glutenSelection: gf extraCheeseSelection: extraCheese, meatsSelection: pepperoni, nonMeatsSelection: peppers}```
 
+
+```Describe: Pizza.prototype.findPrice = function()```
+
+```Test: "It should return a variable named price which reflects a total price value based on the Pizza object it is called on"```
+```Code: Pizza.findPrice```
+```Expected Output: return price;```
+
 ## License
 
 _For questions, comments, or concerns please reach out at Kyungmj@gmail.com_

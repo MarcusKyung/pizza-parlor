@@ -7,11 +7,41 @@ function Pizza(size, gluten, cheese, meat, nonMeat) {
   this.nonMeatsSelection = nonMeat;
 }
 
+Pizza.prototype.findPrice = function(){
+  let price = 0
+  if (this.sizeSelection === "small"){
+    price = price + 10;
+  } else if (this.sizeSelection === "medium") {
+    price = price + 12;
+  } else if (this.sizeSelection === "large"){
+    price = price + 14;
+  }
+  
+  if (this.glutenSelection === "gf"){
+    price = price + 2;
+  }
+
+  if (this.extraCheeseSelection === "extra-cheese"){
+    price = price + 2;
+  }
+
+  if (this.meatsSelection === "pepperoni"){
+    price = price + 1;
+  } else if (this.meatsSelection === "sausage") {
+    price = price + 2;
+  } else if (this.meatsSelection === "prosciutto"){
+    price = price + 4;
+  } else {
+    price = price + 0;
+  }
+
+  return price;
+};
+
 
 //User Logic
 function reveal(){
-  const confirmList = document.querySelector("#confirmation-ul");
-  confirmList.removeAttribute("hidden");
+  document.querySelector("#confirmation-ul").removeAttribute("class");
 };
 
 function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
@@ -44,9 +74,9 @@ function handleFormSubmission(event) {
   ingredientConfirm(size, gluten, cheese, meat, nonMeat)
   reveal();
   let pizzaOrder = new Pizza(size, gluten, cheese, meat, nonMeat);
-  // pizzaOrder.findPrice();
-  // let pizzaPrice = pizzaOrder.findPrice();
-  // document.getElementById("ticket-price").innerText = pizzaPrice;
+  pizzaOrder.findPrice();
+  let pizzaPrice = pizzaOrder.findPrice();
+  document.getElementById("pizza-price").innerText = "$"+pizzaPrice+".00";
 };
 
 window.addEventListener("load", function (){
