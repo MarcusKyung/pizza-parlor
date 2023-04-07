@@ -9,7 +9,6 @@ function Pizza(size, gluten, cheese, meat, nonMeat) {
 
 
 //User Logic
-
 function reveal(){
   const confirmList = document.querySelector("#confirmation-ul");
   confirmList.removeAttribute("hidden");
@@ -23,7 +22,11 @@ function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
   let nonMeatArray = Array.from(nonMeat).map(function(input) {
     return input.value;
   });
-  document.querySelector("li#nonMeatConfirm").innerText = nonMeatArray.join(", ");
+  if (nonMeatArray.length > 0) {
+    document.querySelector("li#nonMeatConfirm").innerText = nonMeatArray.join(", ");
+  } else {
+    document.querySelector("li#nonMeatConfirm").innerText = "no toppings";
+  }
 };
 
 function handleFormSubmission(event) {
