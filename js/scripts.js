@@ -8,7 +8,7 @@ function Pizza(size, gluten, cheese, meat, nonMeat) {
 }
 
 Pizza.prototype.findPrice = function(){
-  let price = 0
+  let price = 0;
   if (this.sizeSelection === "Small"){
     price = price + 10;
   } else if (this.sizeSelection === "Medium") {
@@ -52,8 +52,8 @@ Pizza.prototype.findPrice = function(){
 
 //User Logic
 
-function showDescription1(event){
-  const header1 =  document.querySelector("#size-description")
+function handleDescription1(){
+  const header1 =  document.querySelector("#size-description");
   if (header1.classList.contains ("hidden")) {
     header1.removeAttribute("class");
   } else {
@@ -61,8 +61,8 @@ function showDescription1(event){
   }
 }
 
-function showDescription2(event){
-  const header2 =  document.querySelector("#dough-description")
+function handleDescription2(){
+  const header2 =  document.querySelector("#dough-description");
   if (header2.classList.contains ("hidden")) {
     header2.removeAttribute("class");
   } else {
@@ -70,8 +70,8 @@ function showDescription2(event){
   }
 }
 
-function showDescription3(event){
-  const header3 =  document.querySelector("#cheese-description")
+function handleDescription3(){
+  const header3 =  document.querySelector("#cheese-description");
   if (header3.classList.contains ("hidden")) {
     header3.removeAttribute("class");
   } else {
@@ -79,8 +79,8 @@ function showDescription3(event){
   }
 }
 
-function showDescription4(event){
-  const header4 =  document.querySelector("#meat-description")
+function handleDescription4(){
+  const header4 =  document.querySelector("#meat-description");
   if (header4.classList.contains ("hidden")) {
     header4.removeAttribute("class");
   } else {
@@ -88,17 +88,13 @@ function showDescription4(event){
   }
 }
 
-function showDescription5(event){
-  const header5 =  document.querySelector("#nonmeat-description")
+function handleDescription5(){
+  const header5 =  document.querySelector("#nonmeat-description");
   if (header5.classList.contains ("hidden")) {
     header5.removeAttribute("class");
   } else {
     header5.setAttribute("class", "hidden");
   }
-}
-
-function reveal(){
-  document.querySelector("#confirmation-ul").removeAttribute("class");
 }
 
 function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
@@ -119,17 +115,12 @@ function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
 function handleFormSubmission(event) {
   event.preventDefault();
   const size = document.querySelector("#pizza-size").value;
-  console.log(size);
   const gluten = document.querySelector("#gf-selection").value;
-  console.log(gluten);
   const cheese = document.querySelector("#cheese-ammount").value;
-  console.log(cheese);
   const meat = document.querySelector("#meat-selection").value;
-  console.log(meat);
   const nonMeat = document.querySelectorAll("input[name=non-meats]:checked");
-  console.log(nonMeat);
-  ingredientConfirm(size, gluten, cheese, meat, nonMeat)
-  reveal();
+  ingredientConfirm(size, gluten, cheese, meat, nonMeat);
+  document.querySelector("#confirmation-ul").removeAttribute("class");
   let pizzaOrder = new Pizza(size, gluten, cheese, meat, nonMeat);
   let pizzaPrice = pizzaOrder.findPrice();
   document.getElementById("pizza-price").innerText = "$"+pizzaPrice+".00";
@@ -137,10 +128,10 @@ function handleFormSubmission(event) {
 
 window.addEventListener("load", function (){
   document.querySelector("form#pizza-options").addEventListener("submit", handleFormSubmission);
-  document.querySelector(".menu-header1").addEventListener("click", showDescription1);
-  document.querySelector(".menu-header2").addEventListener("click", showDescription2);
-  document.querySelector(".menu-header3").addEventListener("click", showDescription3);
-  document.querySelector(".menu-header4").addEventListener("click", showDescription4);
-  document.querySelector(".menu-header5").addEventListener("click", showDescription5);
+  document.querySelector(".menu-header1").addEventListener("click", handleDescription1);
+  document.querySelector(".menu-header2").addEventListener("click", handleDescription2);
+  document.querySelector(".menu-header3").addEventListener("click", handleDescription3);
+  document.querySelector(".menu-header4").addEventListener("click", handleDescription4);
+  document.querySelector(".menu-header5").addEventListener("click", handleDescription5);
 
 });

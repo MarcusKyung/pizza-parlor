@@ -12,7 +12,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This basic website application is designed to take a user's pizza order and calculate the sale price based on various inputs including ingredients and pizza size. The application also offers the user a confirmation of all selections at the bottom of the webpage. The pricing feature updates in real time with each click of the "Get Price" submit button._
 
 ## Setup/Installation Requirements
 
@@ -20,6 +20,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 * _Navigate to root level of project directory_
 * _Open index.html file in your browser_
 * _Build a pizza using the dropdowns and check boxes_
+* _Click each menu heading to see an expanded description of each menu section._
 * _Click Get Price to see your total pizza price and a confirmation of all choices_
 
 ## Known Bugs
