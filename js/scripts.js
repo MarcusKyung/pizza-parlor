@@ -20,7 +20,10 @@ function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
   document.querySelector("li#gfConfirm").innerText = gluten;
   document.querySelector("li#cheeseConfirm").innerText = cheese;
   document.querySelector("li#meatConfirm").innerText = meat;
-  document.querySelector("li#nonMeatConfirm").innerText = nonMeat;
+  let nonMeatArray = Array.from(nonMeat).map(function(input) {
+    return input.value;
+  });
+  document.querySelector("li#nonMeatConfirm").innerText = nonMeatArray.join(", ");
 };
 
 function handleFormSubmission(event) {
