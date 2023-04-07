@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Pizza Parlor</title>
+  <link rel="icon" type="image/x-icon" href="img/pizza.png" alt="pizza favicon from https://icons8.com/"> 
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/scripts.js"></script>
@@ -17,7 +18,7 @@
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <hr>
-        <h4>Pizza Size:</h4>
+        <h4 class="menu-header">Pizza Size:</h4>
         <form id="pizza-options">
           <div class="form-group">
             <label for="pizza-size">Pizza Size:</label>
@@ -28,7 +29,7 @@
               </select>
           </div>
           <hr>
-          <h4>Gluten Free Dough Selection:</h4>
+          <h4 class="menu-header">Gluten Free Dough Selection:</h4>
           <div class="form-group">
             <label for="gf-selection">Gluten Free Dough:</label>
               <select name="gf-selection" id="gf-selection">
@@ -37,7 +38,7 @@
               </select>
           </div>
           <hr>
-          <h4>Cheese Selection:</h4>
+          <h4 class="menu-header">Cheese Selection:</h4>
           <div class="form-group">
             <label for="cheese-ammount">Extra Cheese:</label>
               <select name="cheese-ammount" id="cheese-ammount">
@@ -46,7 +47,7 @@
               </select>
           </div>
           <hr>
-          <h4>Meat Selection:</h4>
+          <h4 class="menu-header">Meat Selection:</h4>
           <div class="form-group">
             <label for="meat-selection">Meats:</label>
               <select name="meat-selection" id="meat-selection">
@@ -57,8 +58,8 @@
               </select>
           </div>
           <br>
-          <div class="form-group">
-            <h4>Non-Meat Selection:</h4>
+          <h4 class="menu-header">Non-Meat Selection:</h4>
+          <div class="form-group" >
             <label>Non-Meats:</label>
             <br>
             <label for="pineapple">
