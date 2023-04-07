@@ -1,10 +1,19 @@
+body {
+  background-color: #f5f5f5;
+  color: #1f6491;
+}
+
 h1 {
   text-align: center;
-  color: #538ebe;
+  color: #1f6491;
+  margin: auto;
+  font-family: sans-serif;
+  margin-top: 30px;
 }
 
 p {
   text-align: center;
+  font-family: sans-serif;
 }
 
 #menu-head {
@@ -14,7 +23,8 @@ p {
 h4 {
   text-decoration: underline;
   padding-bottom: 2px;
-  color: #538ebe;
+  color: #1f6491;
+  font-family: sans-serif;
 }
 
 .hidden {
@@ -23,9 +33,16 @@ h4 {
 
 ul {
   font-style: italic;
+  font-family: sans-serif;
 }
 
-body {
-  background-color: #212222;
-  color: #b0cada;
+button {
+  background-color: #1f6491 !important;
+  border-color: #1f6491 !important;
 }
+
+button:hover {
+  background-color: #154666 !important;
+  border-color: #154666 !important;
+}
+
