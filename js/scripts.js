@@ -1,5 +1,5 @@
 //Business Logic
-function Pizza(sizeSelection, glutenSelection, extraCheeseSelection, meatsSelection, nonMeatsSelection) {
+function Pizza(size, gluten, cheese, meat, nonMeat) {
   this.sizeSelection = size;
   this.glutenSelection = gluten;
   this.extraCheeseSelection = cheese;
@@ -11,8 +11,16 @@ function Pizza(sizeSelection, glutenSelection, extraCheeseSelection, meatsSelect
 //User Logic
 
 function reveal(){
-  const confirmList = document.querySelector("#confirmation");
+  const confirmList = document.querySelector("#confirmation-ul");
   confirmList.removeAttribute("hidden");
+};
+
+function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
+  document.querySelector("li#sizeConfirm").innerText = size;
+  document.querySelector("li#gfConfirm").innerText = gluten;
+  document.querySelector("li#cheeseConfirm").innerText = cheese;
+  document.querySelector("li#meatConfirm").innerText = meat;
+  document.querySelector("li#nonMeatConfirm").innerText = nonMeat;
 };
 
 function handleFormSubmission(event) {
@@ -27,8 +35,9 @@ function handleFormSubmission(event) {
   console.log(meat);
   const nonMeat = document.querySelectorAll("input[name=non-meats]:checked");
   console.log(nonMeat);
+  ingredientConfirm(size, gluten, cheese, meat, nonMeat)
   reveal();
-  // let pizzaOrder = new Pizza(sizeSelection, glutenSelection, extraCheeseSelection, meatsSelection, nonMeatsSelection);
+  let pizzaOrder = new Pizza(size, gluten, cheese, meat, nonMeat);
   // pizzaOrder.findPrice();
   // let pizzaPrice = pizzaOrder.findPrice();
   // document.getElementById("ticket-price").innerText = pizzaPrice;
@@ -36,5 +45,4 @@ function handleFormSubmission(event) {
 
 window.addEventListener("load", function (){
   document.querySelector("form#pizza-options").addEventListener("submit", handleFormSubmission);
-
 });

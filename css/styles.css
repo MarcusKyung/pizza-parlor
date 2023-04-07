@@ -9,3 +9,12 @@ p {
 #menu-head {
   text-align: center;
 }
+
+h4 {
+  text-decoration: underline;
+  padding-bottom: 2px;
+}
+
+/* .hidden {
+  display: none;
+} */

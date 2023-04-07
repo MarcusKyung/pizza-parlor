@@ -17,6 +17,7 @@
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <hr>
+        <h4>Pizza Size:</h4>
         <form id="pizza-options">
           <div class="form-group">
             <label for="pizza-size">Pizza Size:</label>
@@ -27,6 +28,7 @@
               </select>
           </div>
           <hr>
+          <h4>Gluten Free Dough Selection:</h4>
           <div class="form-group">
             <label for="gf-selection">Gluten Free Dough:</label>
               <select name="gf-selection" id="gf-selection">
@@ -35,6 +37,7 @@
               </select>
           </div>
           <hr>
+          <h4>Cheese Selection:</h4>
           <div class="form-group">
             <label for="cheese-ammount">Extra Cheese:</label>
               <select name="cheese-ammount" id="cheese-ammount">
@@ -43,24 +46,27 @@
               </select>
           </div>
           <hr>
+          <h4>Meat Selection:</h4>
           <div class="form-group">
             <label for="meat-selection">Meats:</label>
               <select name="meat-selection" id="meat-selection">
-                <option value="pepperoni-meat" id="pepperoni">Pepperoni - +$1</option>
-                <option value="sausage-meat" id="sausage">Sausage - +$2</option>
-                <option value="prosciutto-meat" id="prosciutto">Prosciutto - +$4</option>
+                <option value="pepperoni" id="pepperoni">Pepperoni - +$1</option>
+                <option value="sausage" id="sausage">Sausage - +$2</option>
+                <option value="prosciutto" id="prosciutto">Prosciutto - +$4</option>
               </select>
           </div>
+          <br>
           <div class="form-group">
+            <h4>Non-Meat Selection:</h4>
             <label>Non-Meats:</label>
             <br>
             <label for="pineapple">
-              <input type="checkbox" name="non-meats" value="pineapple" id="pineapple">Pineapple - +$3</label><br/>
+              <input type="checkbox" name="non-meats" value="pineapple" id="pineapple"> Pineapple - +$3</label><br/>
             <label for="peppers">
-              <input type="checkbox" name="non-meats" value="peppers" id="peppers">Peppers - +$2</label>
+              <input type="checkbox" name="non-meats" value="peppers" id="peppers"> Peppers - +$2</label>
             <br/>
             <label for="onions">
-              <input type="checkbox" name="non-meats" value="onions" id="onions">Onions - +$1</label>
+              <input type="checkbox" name="non-meats" value="onions" id="onions"> Onions - +$1</label>
             <br/>
           </div>
           <button type="submit" class="btn-primary">Get Price</button>
@@ -69,11 +75,14 @@
         <h2>Pizza Price:</h2>
         <div id="pizza-price">
         </div>
-        <h2>Confirmation Selection:</h2>
-        <div id="confirmation" class="hidden">
-          <ul id="confirmation-ul"></ul>
-          <p>hello</p>
-        </div>
+        <h2>Confirmation of Selections:</h2>
+          <ul id="confirmation-ul" class="hidden">
+            <li id="sizeConfirm"></li>
+            <li id="gfConfirm"></li>
+            <li id="cheeseConfirm"></li>
+            <li id="meatConfirm"></li>
+            <li id="nonMeatConfirm"></li>
+          </ul>
       </div>  
     </div>    
   </div>
