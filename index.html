@@ -4,11 +4,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>JavaScript Pizza Parlor</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  
+    <div class="container">
+    <h1 id="title">Movie Menu</h1>
+    <p>Welcome to the JS Pizza Parlor! Build your own pizza using the selection options then click the button below to calculate your total item price.</p>
+    <h2 id="menu-head">Pizza and Toppings Menu</h2>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <hr>
+        <form id="pizza-options">
+          <div class="form-group">
+            <label for="pizza-size">Pizza Size:</label>
+              <select name="pizza-size" id="pizza-size">
+                <option value="small" id="small" name="pizza-size">Small - 10"</option>
+                <option value="medium" id="medium" name="pizza-size">Medium - 12"</option>
+                <option value="large" id="the-menu" name="pizza-size">Large - 14"</option>
+              </select>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="gf-free">Gluten Free Dough:</label>
+              <select name="gf-free" id="gf-free">
+                <option value="regular" id="regular" name="gf-free">Regular Dough</option>
+                <option value="gf" id="gf" name="gf-free">Gluten Free Dough</option>
+              </select>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="cheese-ammount">Extra Cheese:</label>
+              <select name="cheese-ammount" id="cheese-ammount">
+                <option value="regular-cheese" id="regular-cheese" name="regular-cheese">Regular Cheese</option>
+                <option value="extra-cheese" id="extra-cheese" name="extra-cheese">Extra Cheese</option>
+              </select>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="age-group">Age:</label>
+              <select name="age-group" id="age-group">
+                <option value="child" id="child-ticket" name="age-group">Child Ticket</option>
+                <option value="adult" id="adult-ticket" name="age-group">Adult Ticket</option>
+                <option value="senior" id="senior-ticket" name="age-group">Senior Ticket</option>
+              </select>
+          </div>
+          <button type="submit" class="btn-primary">Get Price</button>
+        </form>
+        <hr>
+        <h2>Pizza Price:</h2>
+        <div id="ticket-price">
+        </div>
+        <h2>Confirmation Selection:</h2>
+        <img id="poster-image">
 </body>
 </html>
