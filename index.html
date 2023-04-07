@@ -22,8 +22,8 @@
             <label for="pizza-size">Pizza Size:</label>
               <select name="pizza-size" id="pizza-size">
                 <option value="small" id="small">Small - 10" - $10</option>
-                <option value="medium" id="medium">Medium - 12 - $12"</option>
-                <option value="large" id="the-menu">Large - 14" - $14</option>
+                <option value="medium" id="medium">Medium - 12" - $12"</option>
+                <option value="large" id="large">Large - 14" - $14</option>
               </select>
           </div>
           <hr>
@@ -52,12 +52,16 @@
               </select>
           </div>
           <div class="form-group">
-            <label for="non-meats">Non-Meats:</label>
-              <select name="non-meats" id="non-meats">
-                <option value="pineapple" id="pineapple">Pineapple - +$2</option>
-                <option value="peppers" id="peppers">Peppers - +$2</option>
-                <option value="mushrooms" id="mushrooms">Mushrooms - +$2</option>
-              </select>
+            <label>Non-Meats:</label>
+            <br>
+            <label for="pineapple">
+              <input type="checkbox" name="non-meats" value="pineapple" id="pineapple">Pineapple - +$3</label><br/>
+            <label for="peppers">
+              <input type="checkbox" name="non-meats" value="peppers" id="peppers">Peppers - +$2</label>
+            <br/>
+            <label for="onions">
+              <input type="checkbox" name="non-meats" value="onions" id="onions">Onions - +$1</label>
+            <br/>
           </div>
           <button type="submit" class="btn-primary">Get Price</button>
         </form>

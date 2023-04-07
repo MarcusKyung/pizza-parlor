@@ -8,6 +8,7 @@ function Pizza(sizeSelection, glutenSelection, extraCheeseSelection, meatsSelect
 }
 
 
+
 function handleFormSubmission(event) {
   event.preventDefault();
   const size = document.querySelector("#pizza-size").value;
@@ -18,17 +19,13 @@ function handleFormSubmission(event) {
   console.log(cheese);
   const meat = document.querySelector("#meat-selection").value;
   console.log(meat);
-  const nonMeat = document.querySelector("#non-meats").value;
+  const nonMeat = document.querySelectorAll("input[name=non-meats]:checked");
   console.log(nonMeat);
-  // let pizza = new Pizza(sizeSelection, glutenSelection, extraCheeseSelection, meatsSelection, nonMeatsSelection);
-  // movieTicket.findPrice();
-  // let price = pizza.findPrice();
-  // document.getElementById("ticket-price").innerText = price;
-
-}
-
-
-
+  // let pizzaOrder = new Pizza(sizeSelection, glutenSelection, extraCheeseSelection, meatsSelection, nonMeatsSelection);
+  // pizzaOrder.findPrice();
+  // let pizzaPrice = pizzaOrder.findPrice();
+  // document.getElementById("ticket-price").innerText = pizzaPrice;
+};
 
 window.addEventListener("load", function (){
   document.querySelector("form#pizza-options").addEventListener("submit", handleFormSubmission);

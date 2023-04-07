@@ -29,9 +29,9 @@ _{This is a detailed description of your application. Give as much detail as nee
 ## Tests
 ```Describe: Pizza()```
 
-```Test: "It should return a Pizza object with two properties for toppings and size"```
-```Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");```
-```Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }```
+```Test: "It should return a Pizza object with five properties including size, gluten, cheese, meats, and non-meats"```
+```Code: const myPizza = new Pizza(medium, gf, extraCheese, pepperoni, peppers);```
+```Expected Output: Pizza { sizeSelection: medium, glutenSelection: gf extraCheeseSelection: extraCheese, meatsSelection: pepperoni, nonMeatsSelection: peppers}```
 
 ## License
 
