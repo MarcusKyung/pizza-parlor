@@ -8,6 +8,12 @@ function Pizza(sizeSelection, glutenSelection, extraCheeseSelection, meatsSelect
 }
 
 
+//User Logic
+
+function reveal(){
+  const confirmList = document.querySelector("#confirmation");
+  confirmList.removeAttribute("hidden");
+};
 
 function handleFormSubmission(event) {
   event.preventDefault();
@@ -21,6 +27,7 @@ function handleFormSubmission(event) {
   console.log(meat);
   const nonMeat = document.querySelectorAll("input[name=non-meats]:checked");
   console.log(nonMeat);
+  reveal();
   // let pizzaOrder = new Pizza(sizeSelection, glutenSelection, extraCheeseSelection, meatsSelection, nonMeatsSelection);
   // pizzaOrder.findPrice();
   // let pizzaPrice = pizzaOrder.findPrice();
@@ -29,4 +36,5 @@ function handleFormSubmission(event) {
 
 window.addEventListener("load", function (){
   document.querySelector("form#pizza-options").addEventListener("submit", handleFormSubmission);
+
 });
