@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="container">
-    <h1 id="title">Movie Menu</h1>
+    <h1 id="title">JS Pizza Parlor</h1>
     <p>Welcome to the JS Pizza Parlor! Build your own pizza using the selection options then click the button below to calculate your total item price.</p>
     <h2 id="menu-head">Pizza and Toppings Menu</h2>
     <div class="row">
@@ -21,42 +21,42 @@
           <div class="form-group">
             <label for="pizza-size">Pizza Size:</label>
               <select name="pizza-size" id="pizza-size">
-                <option value="small" id="small" name="pizza-size">Small - 10" - $10</option>
-                <option value="medium" id="medium" name="pizza-size">Medium - 12 - $12"</option>
-                <option value="large" id="the-menu" name="pizza-size">Large - 14" - $14</option>
+                <option value="small" id="small">Small - 10" - $10</option>
+                <option value="medium" id="medium">Medium - 12 - $12"</option>
+                <option value="large" id="the-menu">Large - 14" - $14</option>
               </select>
           </div>
           <hr>
           <div class="form-group">
-            <label for="gf-free">Gluten Free Dough:</label>
-              <select name="gf-free" id="gf-free">
-                <option value="regular" id="regular" name="gf-free">Regular Dough</option>
-                <option value="gf" id="gf" name="gf-free">Gluten Free Dough - +$2</option>
+            <label for="gf-selection">Gluten Free Dough:</label>
+              <select name="gf-selection" id="gf-selection">
+                <option value="regular" id="regular">Regular Dough</option>
+                <option value="gf" id="gf">Gluten Free Dough - +$2</option>
               </select>
           </div>
           <hr>
           <div class="form-group">
             <label for="cheese-ammount">Extra Cheese:</label>
               <select name="cheese-ammount" id="cheese-ammount">
-                <option value="regular-cheese" id="regular-cheese" name="regular-cheese">Regular Cheese</option>
-                <option value="extra-cheese" id="extra-cheese" name="extra-cheese">Extra Cheese - +$2</option>
+                <option value="regular-cheese" id="regularCheese">Regular Cheese</option>
+                <option value="extra-cheese" id="extraCheese">Extra Cheese - +$2</option>
               </select>
           </div>
           <hr>
           <div class="form-group">
             <label for="meat-selection">Meats:</label>
               <select name="meat-selection" id="meat-selection">
-                <option value="pepperoni-meat" id="pepperoni-meat" name="meat-selection">Pepperoni - +$1</option>
-                <option value="sausage-meat" id="sausage-meat" name="meat-selection">Sausage - +$2</option>
-                <option value="prosciutto-meat" id="prosciutto-meat" name="meat-selection">Prosciutto - +$4</option>
+                <option value="pepperoni-meat" id="pepperoni">Pepperoni - +$1</option>
+                <option value="sausage-meat" id="sausage">Sausage - +$2</option>
+                <option value="prosciutto-meat" id="prosciutto">Prosciutto - +$4</option>
               </select>
           </div>
           <div class="form-group">
             <label for="non-meats">Non-Meats:</label>
               <select name="non-meats" id="non-meats">
-                <option value="pineapple" id="pineapple" name="non-meats">Pineapple - +$2</option>
-                <option value="peppers" id="peppers" name="non-meats">Peppers - +$2</option>
-                <option value="mushrooms" id="mushrooms" name="non-meats">Mushrooms - +$2</option>
+                <option value="pineapple" id="pineapple">Pineapple - +$2</option>
+                <option value="peppers" id="peppers">Peppers - +$2</option>
+                <option value="mushrooms" id="mushrooms">Mushrooms - +$2</option>
               </select>
           </div>
           <button type="submit" class="btn-primary">Get Price</button>

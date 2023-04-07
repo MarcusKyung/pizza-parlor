@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _JavaScript Pizza Parlor_
 
 #### By _**Marcus Kyung**_
 
