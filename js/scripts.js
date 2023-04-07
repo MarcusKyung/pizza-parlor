@@ -85,12 +85,10 @@ function handleFormSubmission(event) {
   ingredientConfirm(size, gluten, cheese, meat, nonMeat)
   reveal();
   let pizzaOrder = new Pizza(size, gluten, cheese, meat, nonMeat);
-  pizzaOrder.findPrice();
   let pizzaPrice = pizzaOrder.findPrice();
   document.getElementById("pizza-price").innerText = "$"+pizzaPrice+".00";
 };
 
 window.addEventListener("load", function (){
   document.querySelector("form#pizza-options").addEventListener("submit", handleFormSubmission);
-  document.querySelector("form#")
 });

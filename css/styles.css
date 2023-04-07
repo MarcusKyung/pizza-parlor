@@ -55,5 +55,6 @@ button:hover {
 hr {
   color: #e31837;
   background-color: #e31837;
+  height: 3px;
 }
 
