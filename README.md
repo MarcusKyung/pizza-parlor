@@ -37,7 +37,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 ```Describe: Pizza.prototype.findPrice = function()```
 
 ```Test: "It should return a variable named price which reflects a total price value based on the Pizza object it is called on"```
-```Code: Pizza.findPrice```
+```Code: Pizza.findPrice()```
 ```Expected Output: return price;```
 
 ## License

@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  color: #538ebe;
 }
 
 p {
@@ -13,6 +14,7 @@ p {
 h4 {
   text-decoration: underline;
   padding-bottom: 2px;
+  color: #538ebe;
 }
 
 .hidden {
@@ -21,4 +23,9 @@ h4 {
 
 ul {
   font-style: italic;
+}
+
+body {
+  background-color: #212222;
+  color: #b0cada;
 }

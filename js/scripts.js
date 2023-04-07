@@ -34,6 +34,18 @@ Pizza.prototype.findPrice = function(){
   } else if (this.meatsSelection === "No Meat"){
     price = price + 0;
   }
+
+  if (this.nonMeatsSelection[0] === pineapple){
+    price = price + 3;
+  }
+
+  if (this.nonMeatsSelection[1] === peppers){
+    price = price + 2;
+  }
+
+  if (this.nonMeatsSelection[2] === onions){
+    price = price + 1;
+  }
   return price;
 };
 
