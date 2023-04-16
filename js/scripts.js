@@ -35,18 +35,22 @@ Pizza.prototype.findPrice = function(){
     price = price + 0;
   }
 
-  if (this.nonMeatsSelection[0] === pineapple){
+
+  if (this.nonMeatsSelection[0] === pineapple && this.nonMeatsSelection[1] === peppers && this.nonMeatsSelection[2] === onions){
+    price = price + 6;
+  } else if (this.nonMeatsSelection[0] === pineapple && this.nonMeatsSelection[1] === peppers){
+    price = price + 5;
+  } else if (this.nonMeatsSelection[0] === peppers && this.nonMeatsSelection[1] === onions){
     price = price + 3;
-  }
-
-  if (this.nonMeatsSelection[1] === peppers){
+  } else if (this.nonMeatsSelection[0] === pineapple && this.nonMeatsSelection[1] === onions){
+    price = price + 4;
+  } else if (this.nonMeatsSelection[0] === pineapple){
+    price = price + 3;
+  } else if (this.nonMeatsSelection[0] === peppers){
     price = price + 2;
-  }
-
-  if (this.nonMeatsSelection[2] === onions){
+  } else if (this.nonMeatsSelection[0] === onions){
     price = price + 1;
-  }
-  return price;
+  } return price;
 };
 
 
