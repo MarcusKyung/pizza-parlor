@@ -34,6 +34,21 @@ _This basic website application is designed to take a user's pizza order and cal
 ```Code: const myPizza = new Pizza(medium, gf, extraCheese, pepperoni, peppers, Marcus);```
 ```Expected Output: Pizza { sizeSelection: medium, glutenSelection: gf extraCheeseSelection: extraCheese, meatsSelection: pepperoni, nonMeatsSelection: peppers, name: Marcus}```
 
+```Describe: Pizza.prototype.checkName = function()```
+
+```Test: "It should return a variable with the inputted name if the name contains more than 3 letters."```
+```const this.name = "marcus"```
+```Code: Pizza.checkName```
+```Expected Output: this.name = "marcus";```
+
+```Test: "It should return a variable with invalid name if the name contains more fewer than 4 letters."```
+```const this.name = "bob"```
+```Code: Pizza.checkName```
+```Expected Output: this.name = "invalid name";```
+
+
+
+
 ```Describe: Pizza.prototype.findPrice = function()```
 
 ```Test: "It should return a variable named price which reflects the price of a small pizza."```
