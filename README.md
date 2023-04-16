@@ -30,10 +30,9 @@ _This basic website application is designed to take a user's pizza order and cal
 ## Tests
 ```Describe: Pizza()```
 
-```Test: "It should return a Pizza object with five properties including size, gluten, cheese, meats, and non-meats"```
-```Code: const myPizza = new Pizza(medium, gf, extraCheese, pepperoni, peppers);```
-```Expected Output: Pizza { sizeSelection: medium, glutenSelection: gf extraCheeseSelection: extraCheese, meatsSelection: pepperoni, nonMeatsSelection: peppers}```
-
+```Test: "It should return a Pizza object with six properties including size, gluten, cheese, meats, non-meats, and name."```
+```Code: const myPizza = new Pizza(medium, gf, extraCheese, pepperoni, peppers, Marcus);```
+```Expected Output: Pizza { sizeSelection: medium, glutenSelection: gf extraCheeseSelection: extraCheese, meatsSelection: pepperoni, nonMeatsSelection: peppers, name: Marcus}```
 
 ```Describe: Pizza.prototype.findPrice = function()```
 
