@@ -1,11 +1,20 @@
 //Business Logic
-function Pizza(size, gluten, cheese, meat, nonMeat) {
+function Pizza(name, size, gluten, cheese, meat, nonMeat) {
+  this.name = name;
   this.sizeSelection = size;
   this.glutenSelection = gluten;
   this.extraCheeseSelection = cheese;
   this.meatsSelection = meat;
   this.nonMeatsSelection = nonMeat;
 }
+
+Pizza.prototype.checkName = function(){
+  if (this.name.length >= 4) {
+    this.name = this.name;
+  } else {
+    this.name = "invalid name";
+  }
+};
 
 Pizza.prototype.findPrice = function(){
   let price = 0;
@@ -100,7 +109,8 @@ function handleDescription5(){
   }
 }
 
-function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
+function ingredientConfirm(name, size, gluten, cheese, meat, nonMeat){
+  document.querySelector("li#nameConfirm").innerText = name;
   document.querySelector("li#sizeConfirm").innerText = size;
   document.querySelector("li#gfConfirm").innerText = gluten;
   document.querySelector("li#cheeseConfirm").innerText = cheese;
@@ -114,16 +124,17 @@ function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
 
 function handleFormSubmission(event) {
   event.preventDefault();
+  const name = document.querySelector("#name").value;
   const size = document.querySelector("#pizza-size").value;
   const gluten = document.querySelector("#gf-selection").value;
   const cheese = document.querySelector("#cheese-ammount").value;
   const meat = document.querySelector("#meat-selection").value;
   const nonMeat = Array.from(document.querySelectorAll("input[name=non-meats]:checked")).map(node => node.value);
-  ingredientConfirm(size, gluten, cheese, meat, nonMeat);
+  ingredientConfirm(name, size, gluten, cheese, meat, nonMeat);
   document.querySelector("#confirmation-ul").removeAttribute("class");
-  let pizzaOrder = new Pizza(size, gluten, cheese, meat, nonMeat);
-  console.log(pizzaOrder);
+  let pizzaOrder = new Pizza(name, size, gluten, cheese, meat, nonMeat);
   let pizzaPrice = pizzaOrder.findPrice();
+  pizzaOrder.checkName();
   document.getElementById("pizza-price").innerText = "$"+pizzaPrice+".00";
 }
 
