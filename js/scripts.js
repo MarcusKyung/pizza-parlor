@@ -36,19 +36,19 @@ Pizza.prototype.findPrice = function(){
   }
 
 
-  if (this.nonMeatsSelection[0] === pineapple && this.nonMeatsSelection[1] === peppers && this.nonMeatsSelection[2] === onions){
+  if (this.nonMeatsSelection.includes("Pineapple") === true && this.nonMeatsSelection.includes("Peppers") === true && this.nonMeatsSelection.includes("Onions") === true){
     price = price + 6;
-  } else if (this.nonMeatsSelection[0] === pineapple && this.nonMeatsSelection[1] === peppers){
+  } else if (this.nonMeatsSelection.includes("Pineapple") === true && this.nonMeatsSelection.includes("Peppers") === true){
     price = price + 5;
-  } else if (this.nonMeatsSelection[0] === peppers && this.nonMeatsSelection[1] === onions){
+  } else if (this.nonMeatsSelection.includes("Peppers") && this.nonMeatsSelection.includes("Onions") === true){
     price = price + 3;
-  } else if (this.nonMeatsSelection[0] === pineapple && this.nonMeatsSelection[1] === onions){
+  } else if (this.nonMeatsSelection.includes("Pineapple") && this.nonMeatsSelection.includes("Onions") === true){
     price = price + 4;
-  } else if (this.nonMeatsSelection[0] === pineapple){
+  } else if (this.nonMeatsSelection.includes("Pineapple")){
     price = price + 3;
-  } else if (this.nonMeatsSelection[0] === peppers){
+  } else if (this.nonMeatsSelection.includes("Peppers") === true){
     price = price + 2;
-  } else if (this.nonMeatsSelection[0] === onions){
+  } else if (this.nonMeatsSelection.includes("Onions") === true){
     price = price + 1;
   } return price;
 };
@@ -105,11 +105,8 @@ function ingredientConfirm(size, gluten, cheese, meat, nonMeat){
   document.querySelector("li#gfConfirm").innerText = gluten;
   document.querySelector("li#cheeseConfirm").innerText = cheese;
   document.querySelector("li#meatConfirm").innerText = meat;
-  let nonMeatArray = Array.from(nonMeat).map(function(input) {
-    return input.value;
-  });
-  if (nonMeatArray.length > 0) {
-    document.querySelector("li#nonMeatConfirm").innerText = nonMeatArray.join(", ");
+  if (nonMeat.length > 0) {
+    document.querySelector("li#nonMeatConfirm").innerText = nonMeat.join(", ");
   } else {
     document.querySelector("li#nonMeatConfirm").innerText = "No Toppings";
   }
@@ -121,10 +118,11 @@ function handleFormSubmission(event) {
   const gluten = document.querySelector("#gf-selection").value;
   const cheese = document.querySelector("#cheese-ammount").value;
   const meat = document.querySelector("#meat-selection").value;
-  const nonMeat = document.querySelectorAll("input[name=non-meats]:checked");
+  const nonMeat = Array.from(document.querySelectorAll("input[name=non-meats]:checked")).map(node => node.value);
   ingredientConfirm(size, gluten, cheese, meat, nonMeat);
   document.querySelector("#confirmation-ul").removeAttribute("class");
   let pizzaOrder = new Pizza(size, gluten, cheese, meat, nonMeat);
+  console.log(pizzaOrder);
   let pizzaPrice = pizzaOrder.findPrice();
   document.getElementById("pizza-price").innerText = "$"+pizzaPrice+".00";
 }
