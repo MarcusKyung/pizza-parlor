@@ -37,9 +37,91 @@ _This basic website application is designed to take a user's pizza order and cal
 
 ```Describe: Pizza.prototype.findPrice = function()```
 
-```Test: "It should return a variable named price which reflects a total price value based on the Pizza object it is called on"```
+```Test: "It should return a variable named price which reflects the price of a small pizza."```
+```const this.sizeSelection = "small"```
 ```Code: Pizza.findPrice()```
-```Expected Output: return price;```
+```Expected Output: price = 10;```
+
+```Test: "It should return a variable named price which reflects the price of a small pizza."```
+```const this.sizeSelection = "medium"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 12;```
+
+```Test: "It should return a variable named price which reflects the price of a small pizza."```
+```const this.sizeSelection = "large"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 14;```
+
+```Test: "It should return a variable named price which reflects the gluten free dough option selection."```
+```const this.glutenSelection = "Gluten Free Dough"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 2;```
+
+```Test: "It should return a variable named price which reflects the extra cheese option selection."```
+```const this.extraCheeseSelection = "Extra Cheese"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 2;```
+
+```Test: "It should return a variable named price which reflects the price of the pepperoni meat selection."```
+```const this.extraCheeseSelection = "Pepperoni"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 1;```
+
+```Test: "It should return a variable named price which reflects the price of the Sausage meat selection."```
+```const this.extraCheeseSelection = "Sausage"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 2;```
+
+```Test: "It should return a variable named price which reflects the price of the Prosciutto meat selection."```
+```const this.extraCheeseSelection = "Prosciutto"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 4;```
+
+```Test: "It should return a variable named price which reflects the price of the No Meat meat selection."```
+```const this.extraCheeseSelection = "No Meat"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 0;```
+
+```Test: "It should return a variable named price which reflects the price of the pizza when the nonMeats selection array includes "Pineapple", "Peppers", "Onions"."```
+```const this.nonMeatsSelection = ["Pineapple", "Peppers", "Onions"]```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 6;```
+
+```Test: "It should return a variable named price which reflects the price of the pizza when the nonMeats selection array includes "Pineapple", "Peppers"."```
+```const this.nonMeatsSelection = ["Pineapple", "Peppers"]```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 5;```
+
+```Test: "It should return a variable named price which reflects the price of the pizza when the nonMeats selection array includes "Peppers", "Onions"."```
+```const this.nonMeatsSelection = ["Peppers", "Onions"]```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 3;```
+
+```Test: "It should return a variable named price which reflects the price of the pizza when the nonMeats selection array includes "Pineapples", "Onions"."```
+```const this.nonMeatsSelection = ["Pineapples", "Onions"]```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 4;```
+
+```Test: "It should return a variable named price which reflects the price of the pizza when the nonMeats selection array includes "Pineapples""```
+```const this.nonMeatsSelection = ["Pineapples"]```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 3;```
+
+```Test: "It should return a variable named price which reflects the price of the pizza when the nonMeats selection array includes "Peppers"."```
+```const this.nonMeatsSelection = ["Peppers"]```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 2;```
+
+```Test: "It should return a variable named price which reflects the price of the pizza when the nonMeats selection array includes "Onions"."```
+```const this.nonMeatsSelection = ["Onions"]```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 1;```
+
+
+
+
+
+
 
 ## License
 

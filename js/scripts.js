@@ -36,19 +36,19 @@ Pizza.prototype.findPrice = function(){
   }
 
 
-  if (this.nonMeatsSelection.includes("Pineapple") === true && this.nonMeatsSelection.includes("Peppers") === true && this.nonMeatsSelection.includes("Onions") === true){
+  if (this.nonMeatsSelection.includes("Pineapple") && this.nonMeatsSelection.includes("Peppers") && this.nonMeatsSelection.includes("Onions")){
     price = price + 6;
-  } else if (this.nonMeatsSelection.includes("Pineapple") === true && this.nonMeatsSelection.includes("Peppers") === true){
+  } else if (this.nonMeatsSelection.includes("Pineapple") && this.nonMeatsSelection.includes("Peppers")){
     price = price + 5;
-  } else if (this.nonMeatsSelection.includes("Peppers") && this.nonMeatsSelection.includes("Onions") === true){
+  } else if (this.nonMeatsSelection.includes("Peppers") && this.nonMeatsSelection.includes("Onions")){
     price = price + 3;
-  } else if (this.nonMeatsSelection.includes("Pineapple") && this.nonMeatsSelection.includes("Onions") === true){
+  } else if (this.nonMeatsSelection.includes("Pineapple") && this.nonMeatsSelection.includes("Onions")){
     price = price + 4;
   } else if (this.nonMeatsSelection.includes("Pineapple")){
     price = price + 3;
-  } else if (this.nonMeatsSelection.includes("Peppers") === true){
+  } else if (this.nonMeatsSelection.includes("Peppers")){
     price = price + 2;
-  } else if (this.nonMeatsSelection.includes("Onions") === true){
+  } else if (this.nonMeatsSelection.includes("Onions")){
     price = price + 1;
   } return price;
 };
