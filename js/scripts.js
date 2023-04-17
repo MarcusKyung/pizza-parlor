@@ -9,7 +9,7 @@ function Pizza(name, size, gluten, cheese, meat, nonMeat) {
 }
 
 Pizza.prototype.checkName = function(){
-  if (this.name.length <= 4) {
+  if (this.name.length < 4) {
     this.name = "invalid name"
   }
   };
@@ -133,6 +133,7 @@ function handleFormSubmission(event) {
   let pizzaOrder = new Pizza(name, size, gluten, cheese, meat, nonMeat);
   let pizzaPrice = pizzaOrder.findPrice();
   pizzaOrder.checkName();
+  console.log(pizzaOrder);
   document.getElementById("pizza-price").innerText = "$"+pizzaPrice+".00";
 }
 
