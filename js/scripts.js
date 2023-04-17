@@ -10,7 +10,7 @@ function Pizza(name, size, gluten, cheese, meat, nonMeat) {
 
 Pizza.prototype.checkName = function(){
   if (this.name.length < 4) {
-    this.name = "invalid name"
+    this.name = "invalid name";
   }
   };
 
@@ -22,6 +22,8 @@ Pizza.prototype.findPrice = function(){
     price = price + 12;
   } else if (this.sizeSelection === "Large"){
     price = price + 14;
+  } else {
+    price = price + 100;
   }
   
   if (this.glutenSelection === "Gluten Free Dough"){
