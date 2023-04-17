@@ -19,13 +19,14 @@ _This basic website application is designed to take a user's pizza order and cal
 * _Download codebase from GH to local machine, ensuring that all files and directories are included_
 * _Navigate to root level of project directory_
 * _Open index.html file in your browser_
-* _Build a pizza using the dropdowns and check boxes_
+* _Input a name longer than 3 characters and build a pizza using the dropdowns and check boxes_
+* _Names shorter than 4 characters will be logged as "invalid name"_
 * _Click each menu heading to see an expanded description of each menu section._
 * _Click Get Price to see your total pizza price and a confirmation of all choices_
 
 ## Known Bugs
 
-* _No Known Bugs_
+* _If no size is selected the #nameConfirm bullet shows blank_
 
 ## Tests
 ```Describe: Pizza()```
@@ -34,12 +35,14 @@ _This basic website application is designed to take a user's pizza order and cal
 ```Code: const myPizza = new Pizza(medium, gf, extraCheese, pepperoni, peppers, Marcus);```
 ```Expected Output: Pizza { sizeSelection: medium, glutenSelection: gf extraCheeseSelection: extraCheese, meatsSelection: pepperoni, nonMeatsSelection: peppers, name: Marcus}```
 
+
 ```Describe: Pizza.prototype.checkName = function()```
 
 ```Test: "It should update this.name to invalid name if the name contains more fewer than 4 letters."```
 ```const this.name = "abc"```
-```Code: Pizza.checkName```
+```Code: Pizza.checkName()```
 ```Expected Output: this.name = "invalid name";```
+
 
 ```Describe: Pizza.prototype.findPrice = function()```
 
@@ -127,12 +130,6 @@ _This basic website application is designed to take a user's pizza order and cal
 ```const this.nonMeatsSelection = ["Onions"]```
 ```Code: Pizza.findPrice()```
 ```Expected Output: price = 1;```
-
-
-
-
-
-
 
 ## License
 
