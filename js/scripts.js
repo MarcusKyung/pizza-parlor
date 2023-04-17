@@ -44,7 +44,6 @@ Pizza.prototype.findPrice = function(){
     price = price + 0;
   }
 
-
   if (this.nonMeatsSelection.includes("Pineapple") && this.nonMeatsSelection.includes("Peppers") && this.nonMeatsSelection.includes("Onions")){
     price = price + 6;
   } else if (this.nonMeatsSelection.includes("Pineapple") && this.nonMeatsSelection.includes("Peppers")){
@@ -135,7 +134,6 @@ function handleFormSubmission(event) {
   let pizzaOrder = new Pizza(name, size, gluten, cheese, meat, nonMeat);
   let pizzaPrice = pizzaOrder.findPrice();
   pizzaOrder.checkName();
-  console.log(pizzaOrder);
   document.getElementById("pizza-price").innerText = "$"+pizzaPrice+".00";
 }
 
