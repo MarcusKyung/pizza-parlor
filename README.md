@@ -46,9 +46,6 @@ _This basic website application is designed to take a user's pizza order and cal
 ```Code: Pizza.checkName```
 ```Expected Output: this.name = "invalid name";```
 
-
-
-
 ```Describe: Pizza.prototype.findPrice = function()```
 
 ```Test: "It should return a variable named price which reflects the price of a small pizza."```
@@ -65,6 +62,11 @@ _This basic website application is designed to take a user's pizza order and cal
 ```const this.sizeSelection = "large"```
 ```Code: Pizza.findPrice()```
 ```Expected Output: price = 14;```
+
+```Test: "It should return a variable named price which reflects a price of $100 when no size is selected."```
+```const this.sizeSelection = "null"```
+```Code: Pizza.findPrice()```
+```Expected Output: price = 100;```
 
 ```Test: "It should return a variable named price which reflects the gluten free dough option selection."```
 ```const this.glutenSelection = "Gluten Free Dough"```

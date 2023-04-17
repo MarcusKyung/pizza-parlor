@@ -9,12 +9,10 @@ function Pizza(name, size, gluten, cheese, meat, nonMeat) {
 }
 
 Pizza.prototype.checkName = function(){
-  if (this.name.length >= 4) {
-    this.name = this.name;
-  } else {
-    this.name = "invalid name";
+  if (this.name.length <= 4) {
+    this.name = "invalid name"
   }
-};
+  };
 
 Pizza.prototype.findPrice = function(){
   let price = 0;
