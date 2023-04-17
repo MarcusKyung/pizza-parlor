@@ -19,11 +19,15 @@
       <div class="col-md-8 offset-md-2">
         <hr>
         <form id="pizza-options">
+          <label for="name">Customer Name:</label>
+          <input type="text" id="name" name="name">
+          <hr>
           <h4 class="menu-header1">Pizza Size:</h4>
           <p class="hidden" id="size-description">Select your pizza size. Choose from 10, 12, or 14 inches!</p>
           <div class="form-group">
             <label for="pizza-size">Pizza Size:</label>
               <select name="pizza-size" id="pizza-size">
+                <option disabled selected value> -- select an option -- </option>
                 <option value="Small" id="small">Small - 10" - $10</option>
                 <option value="Medium" id="medium">Medium - 12" - $12"</option>
                 <option value="Large" id="large">Large - 14" - $14</option>
@@ -85,6 +89,7 @@
         </div>
         <h2>Confirmation of Selections:</h2>
           <ul id="confirmation-ul" class="hidden">
+            <li id="nameConfirm"></li>
             <li id="sizeConfirm"></li>
             <li id="gfConfirm"></li>
             <li id="cheeseConfirm"></li>

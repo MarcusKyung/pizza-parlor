@@ -36,13 +36,8 @@ _This basic website application is designed to take a user's pizza order and cal
 
 ```Describe: Pizza.prototype.checkName = function()```
 
-```Test: "It should return a variable with the inputted name if the name contains more than 3 letters."```
-```const this.name = "marcus"```
-```Code: Pizza.checkName```
-```Expected Output: this.name = "marcus";```
-
-```Test: "It should return a variable with invalid name if the name contains more fewer than 4 letters."```
-```const this.name = "bob"```
+```Test: "It should update this.name to invalid name if the name contains more fewer than 4 letters."```
+```const this.name = "abc"```
 ```Code: Pizza.checkName```
 ```Expected Output: this.name = "invalid name";```
 
@@ -64,7 +59,7 @@ _This basic website application is designed to take a user's pizza order and cal
 ```Expected Output: price = 14;```
 
 ```Test: "It should return a variable named price which reflects a price of $100 when no size is selected."```
-```const this.sizeSelection = "null"```
+```const this.sizeSelection = ""```
 ```Code: Pizza.findPrice()```
 ```Expected Output: price = 100;```
 
